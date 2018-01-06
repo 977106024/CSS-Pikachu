@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=`device-width`, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  *{margin:0;padding: 0;}
+  *{box-sizing:border-box;}
+  *::after{box-sizing:border-box;}
+  *::before{box-sizing:border-box;}
+    body{
+      background: #ffe600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    #container{
+      height: 300px;
+      width: 460px;
+      position:relative;
+    }
+    #nose{
+      position:absolute;
+      left:50%;
+      top:100px;
+      transform:translateX(-50%);
+      border:20px solid transparent;
+      border-top-color:black;
+      border-radius:50%;
+    }
+    /* #nose::before{
+      content:'';
+      display:block;
+      height: 5px;
+      width: 20px;
+      background: black;
+      position:absolute;
+      top: -15px;
+      left: -10px;
+      border-top-left-radius:30px;
+      border-top-right-radius:30px;
+    } */
+    .eye{
+      position:absolute;
+      width: 60px;
+      height: 60px;
+      background:#2e2e2e;
+      border:2px solid black;
+      border-radius:30px;
+      top:65px;
+    }
+    .eye::before{
+      content:'';
+      display:block;
+      width: 30px;
+      height: 30px;
+      background:white;
+      border-radius:15px;
+      position:absolute;
+      top: 1px;
+      left: 7px;
+      border:2px solid black;
+    }
+    .eye-left{
+      left: 50%;
+      margin-left: 90px;
+    }
+    .eye-right{
+      right:50%;
+      margin-right: 90px;
+    }
+    .upperLip{
+      /* border:1px solid red; */
+      position:absolute;
+      top: 130px;
+      width:100%;
+      display:flex;
+      justify-content: center;
+      z-index: 1;
+    }
+    .upperLip::before{
+      content:'';
+      display:block;
+      width:80px;
+      height:25px;
+      border:3px solid black;
+      border-top: none;
+      border-right: none;
+      border-bottom-left-radius:40px 20px;
+      transform:rotateZ(-20deg);
+      background:#ffe600;
+    }
+    .upperLip::after{
+      content:'';
+      display:block;
+      width:80px;
+      height:25.5px;
+      border:3px solid black;
+      border-top: none;
+      border-left: none;
+      border-bottom-right-radius:40px 20px;
+      transform:rotateZ(20deg);
+      background:#ffe600;
+    }
+    .lowerLip-wrap{
+      position:absolute;
+      top: 138px;
+      width: 100%;
+      height: 180px;
+      overflow:hidden;
+    }
+    .lowerLip{
+      position:absolute;
+      border:3px solid black;
+      width: 160px;
+      height: 800px;
+      bottom: 0px;
+      left: 50%;
+      transform:translateX(-50%);
+      border-top: none;
+      border-bottom-left-radius:100px 700px;
+      border-bottom-right-radius:100px 700px;
+      background:#ff485f;
+      border-top-left-radius:100px;
+      border-top-right-radius:100px;
+      box-shadow: inset 0 628px 0 20px #9b000a;
+    }
+    .face{
+      border:3px solid black;
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      top: 170px;
+      border-radius:45px;
+      background: #ff0000;
+    }
+    .face-left{
+      left: 50%;
+      margin-left: 130px;
+    }
+    .face-right{
+      right:50%;
+      margin-right: 130px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="nose"></div>
+    <div class="eye eye-left"></div>
+    <div class="eye eye-right"></div>
+    <div class="upperLip"></div>
+    <div class="lowerLip-wrap">
+      <div class="lowerLip"></div>
+    </div>
+    <div class="face face-left"></div>
+    <div class="face face-right"></div>
+  </div>
+</body>
+</html>
